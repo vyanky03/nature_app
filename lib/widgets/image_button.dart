@@ -5,15 +5,20 @@ class ImageButton extends StatelessWidget {
   const ImageButton({
     super.key,
     required this.src,
+    required this.press,
   });
   final String src;
+  final Function() press;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8),
-      child: SvgPicture.asset(
-        src,
-        height: 40,
+      child: GestureDetector(
+        onTap: press,
+        child: SvgPicture.asset(
+          src,
+          height: 40,
+        ),
       ),
     );
   }

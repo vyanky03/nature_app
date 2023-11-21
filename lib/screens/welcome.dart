@@ -63,7 +63,9 @@ class WelcomeScreen extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            const FinalButton(text: 'Login'),
+            const FinalButton(
+              text: 'Login',
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

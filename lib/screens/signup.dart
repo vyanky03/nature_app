@@ -82,7 +82,9 @@ class SignUpScreen extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const FinalButton(text: 'Signup'),
+                const FinalButton(
+                  text: 'Signup',
+                ),
                 const SizedBox(
                   height: 15,
                 ),
@@ -90,20 +92,24 @@ class SignUpScreen extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ImageButton(
                       src: 'assets/images/2021_Facebook_icon.svg',
+                      press: () {},
                     ),
                     ImageButton(
                       src: 'assets/images/Google.svg',
+                      press: () {},
                     ),
                     ImageButton(
                       src: 'assets/images/Instagram.svg',
+                      press: () {},
                     ),
                     ImageButton(
                       src: 'assets/images/X.svg',
+                      press: () {},
                     ),
                   ],
                 )
