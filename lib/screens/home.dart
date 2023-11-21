@@ -6,7 +6,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Text('faudfbakufbdakbf'),
+      body: SafeArea(
+        child: Align(
+          child: Text("Let's do this!"),
+        ),
+      ),
     );
   }
 }
