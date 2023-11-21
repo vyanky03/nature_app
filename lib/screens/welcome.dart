@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nature_app/screens/signup.dart';
 import 'package:nature_app/widgets/final_button.dart';
 import 'package:nature_app/widgets/login_field.dart';
 import 'package:nature_app/widgets/login_text.dart';
@@ -62,7 +63,7 @@ class WelcomeScreen extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            const FinalButton(),
+            const FinalButton(text: 'Login'),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -71,7 +72,14 @@ class WelcomeScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpScreen(),
+                      ),
+                    );
+                  },
                   child: const Text(
                     'SignUp',
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
