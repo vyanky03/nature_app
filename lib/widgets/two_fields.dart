@@ -22,6 +22,7 @@ class TwoFields extends StatelessWidget {
     return Row(
       children: [
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             LoginText(text: text),
             SizedBox(
@@ -37,6 +38,7 @@ class TwoFields extends StatelessWidget {
           width: 10,
         ),
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             LoginText(text: text2),
             SizedBox(
