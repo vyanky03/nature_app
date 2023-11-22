@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nature_app/screens/signup.dart';
 import 'package:nature_app/widgets/final_button.dart';
 import 'package:nature_app/widgets/login_field.dart';
 import 'package:nature_app/widgets/login_text.dart';
@@ -75,12 +74,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const SignUpScreen(),
-                      ),
-                    );
+                    Navigator.pushNamed(context, '/second');
                   },
                   child: const Text(
                     'SignUp',

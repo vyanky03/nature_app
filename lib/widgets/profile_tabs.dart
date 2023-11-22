@@ -12,12 +12,12 @@ class ProfileTabs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 5),
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 5),
+          child: GestureDetector(
+            onTap: () {},
             child: Row(
               children: [
                 preicon,
@@ -43,12 +43,12 @@ class ProfileTabs extends StatelessWidget {
               ],
             ),
           ),
-          const Divider(
-            color: Colors.black,
-            thickness: 1,
-          ),
-        ],
-      ),
+        ),
+        const Divider(
+          color: Colors.black,
+          thickness: 1,
+        ),
+      ],
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nature_app/constants.dart';
-import 'package:nature_app/screens/home.dart';
 
 class FinalButton extends StatelessWidget {
   const FinalButton({
@@ -15,12 +14,7 @@ class FinalButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const HomeScreen(),
-            ),
-          );
+          Navigator.pushNamed(context, '/home');
         },
         style: ButtonStyle(
           shape: MaterialStatePropertyAll(
