@@ -1,51 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:nature_app/constants.dart';
-import 'package:nature_app/widgets/profile_acheivements.dart';
-import 'package:nature_app/widgets/profile_list.dart';
-import 'package:nature_app/widgets/profile_name.dart';
+import 'package:nature_app/screens/home_screen.dart';
+import 'package:nature_app/screens/search_screen.dart';
+import 'package:nature_app/widgets/profile_page_details.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
+
+  @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  int currentIndex = 0;
+
+  final screens = const [
+    HomeScreen(),
+    SearchScreen(),
+    ProfilePageDetails(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
-      appBar: AppBar(
-        leading: const Icon(Icons.menu),
-        backgroundColor: bgColor,
-      ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            const ProfileName(),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ProfileAchievements(),
-                ProfileAchievements(),
-                ProfileAchievements(),
-              ],
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Expanded(
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
-                  ),
-                ),
-                child: const ProfileList(),
-              ),
-            ),
-          ],
-        ),
+      body: IndexedStack(
+        index: currentIndex,
+        children: screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: bgColor,
+        currentIndex: currentIndex,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white54,
+        type: BottomNavigationBarType.fixed,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        iconSize: 30,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -60,6 +51,11 @@ class HomeScreen extends StatelessWidget {
             label: 'Profile',
           ),
         ],
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
       ),
     );
   }
