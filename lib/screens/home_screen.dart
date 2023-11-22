@@ -13,7 +13,9 @@ class HomeScreen extends StatelessWidget {
         leading: const Icon(Icons.menu),
         backgroundColor: bgColor,
       ),
-      body: const Center(child: Text('Home Screen')),
+      body: const Center(
+        child: Text('Home Screen'),
+      ),
     );
   }
 }
