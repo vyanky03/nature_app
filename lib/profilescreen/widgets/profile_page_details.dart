@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nature_app/widgets/profile_acheivements.dart';
-import 'package:nature_app/widgets/profile_list.dart';
-import 'package:nature_app/widgets/profile_name.dart';
+import 'package:nature_app/profilescreen/widgets/profile_acheivements.dart';
+import 'package:nature_app/profilescreen/widgets/profile_list.dart';
+import 'package:nature_app/profilescreen/widgets/profile_name.dart';
 
 class ProfilePageDetails extends StatelessWidget {
   const ProfilePageDetails({

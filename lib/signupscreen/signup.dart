@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nature_app/widgets/divider.dart';
-import 'package:nature_app/widgets/final_button.dart';
-import 'package:nature_app/widgets/image_button.dart';
-import 'package:nature_app/widgets/login_field.dart';
-import 'package:nature_app/widgets/login_text.dart';
-import 'package:nature_app/widgets/two_fields.dart';
+import 'package:nature_app/signupscreen/widgets/divider.dart';
+import 'package:nature_app/welcomescreen/widgets/final_button.dart';
+import 'package:nature_app/signupscreen/widgets/image_button.dart';
+import 'package:nature_app/welcomescreen/widgets/login_field.dart';
+import 'package:nature_app/welcomescreen/widgets/login_text.dart';
+import 'package:nature_app/signupscreen/widgets/two_fields.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});

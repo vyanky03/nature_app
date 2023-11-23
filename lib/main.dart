@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nature_app/screens/profile.dart';
-import 'package:nature_app/screens/signup.dart';
-import 'package:nature_app/screens/welcome.dart';
+import 'package:nature_app/profilescreen/profile.dart';
+import 'package:nature_app/signupscreen/signup.dart';
+import 'package:nature_app/welcomescreen/welcome.dart';
 
 void main() {
   runApp(const MyApp());

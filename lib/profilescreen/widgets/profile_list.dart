@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nature_app/widgets/profile_tabs.dart';
+import 'package:nature_app/profilescreen/widgets/profile_tabs.dart';
 
 class ProfileList extends StatelessWidget {
   const ProfileList({

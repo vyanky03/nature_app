@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nature_app/constants.dart';
-import 'package:nature_app/screens/home_screen.dart';
-import 'package:nature_app/screens/search_screen.dart';
-import 'package:nature_app/widgets/profile_page_details.dart';
+import 'package:nature_app/homescreen/home_screen.dart';
+import 'package:nature_app/searchscreen/search_screen.dart';
+import 'package:nature_app/profilescreen/widgets/profile_page_details.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});

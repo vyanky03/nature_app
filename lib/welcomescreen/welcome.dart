@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nature_app/widgets/final_button.dart';
-import 'package:nature_app/widgets/login_field.dart';
-import 'package:nature_app/widgets/login_text.dart';
+import 'package:nature_app/welcomescreen/widgets/final_button.dart';
+import 'package:nature_app/welcomescreen/widgets/login_field.dart';
+import 'package:nature_app/welcomescreen/widgets/login_text.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});

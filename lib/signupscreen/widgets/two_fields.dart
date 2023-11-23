@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nature_app/widgets/login_field.dart';
-import 'package:nature_app/widgets/login_text.dart';
+import 'package:nature_app/welcomescreen/widgets/login_field.dart';
+import 'package:nature_app/welcomescreen/widgets/login_text.dart';
 
 class TwoFields extends StatelessWidget {
   const TwoFields({
