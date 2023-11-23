@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const WelcomeScreen(),
-        '/second': (context) => const SignUpScreen(),
-        '/home': (context) => const ProfileScreen(),
+        '/signup': (context) => const SignUpScreen(),
+        '/profile': (context) => const ProfileScreen(),
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Ubuntu'),

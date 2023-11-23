@@ -14,7 +14,7 @@ class FinalButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/home');
+          Navigator.pushNamed(context, '/profile');
         },
         style: ButtonStyle(
           shape: MaterialStatePropertyAll(

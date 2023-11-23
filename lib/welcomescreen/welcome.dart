@@ -74,7 +74,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/second');
+                    Navigator.pushNamed(context, '/signup');
                   },
                   child: const Text(
                     'SignUp',
