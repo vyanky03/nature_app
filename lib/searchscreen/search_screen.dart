@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nature_app/constants.dart';
+import 'package:nature_app/homescreen/widgets/appbar.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -13,12 +13,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('The Nature App'),
-        centerTitle: true,
-        leading: const Icon(Icons.menu),
-        backgroundColor: bgColor,
-      ),
+      appBar: buildAppbar(),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Container(

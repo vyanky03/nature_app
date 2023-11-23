@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nature_app/constants.dart';
+import 'package:nature_app/homescreen/widgets/appbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,15 +7,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('The Nature App'),
-        centerTitle: true,
-        leading: const Icon(Icons.menu),
-        backgroundColor: bgColor,
-      ),
-      body: const Center(
-        child: Text('Home Screen'),
-      ),
+      appBar: buildAppbar(),
     );
   }
 }
