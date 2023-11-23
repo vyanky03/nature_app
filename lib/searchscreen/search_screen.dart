@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nature_app/constants.dart';
 import 'package:nature_app/homescreen/widgets/appbar.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -12,40 +13,56 @@ class _SearchScreenState extends State<SearchScreen> {
   final TextEditingController search = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: buildAppbar(),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-            child: Container(
-              height: 70,
+      body: SizedBox(
+        height: size.height * 0.12,
+        child: Stack(
+          children: [
+            Container(
+              height: size.height * 0.12 - 25,
               decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(40),
+                color: bgColor,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(50),
+                  bottomRight: Radius.circular(50),
                 ),
               ),
-              child: TextField(
-                controller: search,
-                decoration: InputDecoration(
-                  hintText: 'Search',
-                  prefixIcon: const Icon(Icons.search_rounded),
-                  suffixIcon: IconButton(
-                    onPressed: () => setState(() {
-                      search.clear();
-                    }),
-                    icon: const Icon(Icons.clear),
-                  ),
-                  border: const OutlineInputBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(40),
+            ),
+            Positioned(
+              bottom: 0,
+              left: 0,
+              right: 0,
+              child: Container(
+                height: 60,
+                margin: const EdgeInsets.symmetric(horizontal: 35),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(40),
+                ),
+                child: TextField(
+                  controller: search,
+                  decoration: InputDecoration(
+                    hintText: 'Search',
+                    prefixIcon: const Icon(Icons.search_rounded),
+                    suffixIcon: IconButton(
+                      onPressed: () => setState(() {
+                        search.clear();
+                      }),
+                      icon: const Icon(Icons.clear),
+                    ),
+                    border: const OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(40),
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
