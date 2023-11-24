@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nature_app/constants.dart';
+import 'package:nature_app/feedscreen/feed_screen.dart';
 import 'package:nature_app/homescreen/home_screen.dart';
 import 'package:nature_app/searchscreen/search_screen.dart';
 import 'package:nature_app/profilescreen/widgets/profile_page_details.dart';
@@ -16,6 +17,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   final screens = const [
     HomeScreen(),
+    FeedScreen(),
     SearchScreen(),
     ProfilePageDetails(),
   ];
@@ -41,6 +43,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.format_list_bulleted),
+            label: 'Feed',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search_rounded),

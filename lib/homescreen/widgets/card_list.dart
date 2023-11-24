@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nature_app/constants.dart';
 import 'package:nature_app/homescreen/widgets/card_container.dart';
+import 'package:nature_app/homescreen/widgets/curver_container.dart';
 
 class CardList extends StatelessWidget {
   const CardList({
@@ -9,19 +9,10 @@ class CardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
-        Container(
-          height: 10,
-          decoration: const BoxDecoration(
-            color: bgColor,
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(10),
-              bottomRight: Radius.circular(10),
-            ),
-          ),
-        ),
-        const SingleChildScrollView(
+        CurveContainer(),
+        SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Padding(
             padding: EdgeInsets.only(left: 20, top: 20),
