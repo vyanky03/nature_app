@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../constants.dart';
 
 class CardContainer extends StatelessWidget {
   const CardContainer({
@@ -26,16 +25,9 @@ class CardContainer extends StatelessWidget {
           Container(
             height: size.height * 0.08,
             width: size.width * 0.45,
-            decoration: BoxDecoration(
-              color: Colors.redAccent,
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 50,
-                  offset: const Offset(0, 10),
-                  color: bgColor.withOpacity(0.23),
-                ),
-              ],
-              borderRadius: const BorderRadius.only(
+            decoration: const BoxDecoration(
+              color: Color.fromARGB(137, 202, 201, 201),
+              borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(10),
                 bottomRight: Radius.circular(10),
               ),
