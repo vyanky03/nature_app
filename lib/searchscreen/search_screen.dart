@@ -21,7 +21,7 @@ class _SearchScreenState extends State<SearchScreen> {
         child: Stack(
           children: [
             Container(
-              height: size.height * 0.12 - 25,
+              height: size.height * 0.12 - 60,
               decoration: const BoxDecoration(
                 color: bgColor,
                 borderRadius: BorderRadius.only(
@@ -31,7 +31,7 @@ class _SearchScreenState extends State<SearchScreen> {
               ),
             ),
             Positioned(
-              bottom: 0,
+              bottom: 30,
               left: 0,
               right: 0,
               child: Container(

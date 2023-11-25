@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nature_app/feedscreen/widgets/animated_button.dart';
+import 'package:nature_app/feedscreen/widgets/post_details.dart';
+import 'package:nature_app/feedscreen/widgets/story_line.dart';
 import 'package:nature_app/homescreen/widgets/appbar.dart';
 import 'package:nature_app/homescreen/widgets/curver_container.dart';
 
 class FeedScreen extends StatelessWidget {
   const FeedScreen({super.key});
-
-  // late AnimationController animationController;
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +19,12 @@ class FeedScreen extends StatelessWidget {
         child: const Stack(
           children: [
             CurveContainer(),
-            Column(
-              children: [
-                Text('data'),
-                Text('data'),
-                Text('data'),
-              ],
-            ),
             AnimatedButtonClass(),
+            StoryLine(),
+            PostDetails(
+              name: 'Vyankatesh Kshatriya',
+              postimg: 'assets/images/Google.svg',
+            ),
           ],
         ),
       ),
