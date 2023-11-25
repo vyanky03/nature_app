@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nature_app/feedscreen/widgets/animated_button.dart';
-import 'package:nature_app/feedscreen/widgets/post_details.dart';
+import 'package:nature_app/feedscreen/widgets/post_list.dart';
 import 'package:nature_app/feedscreen/widgets/story_line.dart';
 import 'package:nature_app/homescreen/widgets/appbar.dart';
 import 'package:nature_app/homescreen/widgets/curver_container.dart';
@@ -19,12 +19,9 @@ class FeedScreen extends StatelessWidget {
         child: const Stack(
           children: [
             CurveContainer(),
-            AnimatedButtonClass(),
+            PostList(),
             StoryLine(),
-            PostDetails(
-              name: 'Vyankatesh Kshatriya',
-              postimg: 'assets/images/Google.svg',
-            ),
+            AnimatedButtonClass(),
           ],
         ),
       ),
