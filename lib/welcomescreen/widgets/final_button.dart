@@ -17,6 +17,7 @@ class FinalButton extends StatelessWidget {
         onPressed: () async {
           var sharedPref = await SharedPreferences.getInstance();
           sharedPref.setBool(SplashScreenState.keyLogin, true);
+          // ignore: use_build_context_synchronously
           Navigator.pushNamed(context, '/profile');
         },
         style: ButtonStyle(
