@@ -9,6 +9,7 @@ class LoginField extends StatelessWidget {
 
   final String text;
   final Icon icon;
+
   @override
   Widget build(BuildContext context) {
     return TextField(

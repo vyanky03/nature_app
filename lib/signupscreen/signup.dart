@@ -23,15 +23,12 @@ class SignUpScreen extends StatelessWidget {
               children: [
                 const Align(
                   alignment: Alignment.center,
-                  child: Padding(
-                    padding: EdgeInsets.only(bottom: 15),
-                    child: Text(
-                      'Register yourself here!',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 1,
-                      ),
+                  child: Text(
+                    'Register yourself here!',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 1,
                     ),
                   ),
                 ),

@@ -6,7 +6,6 @@ class FinalButton extends StatelessWidget {
     super.key,
     required this.text,
   });
-
   final String text;
   @override
   Widget build(BuildContext context) {
