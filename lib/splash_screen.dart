@@ -1,7 +1,5 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:nature_app/constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -31,7 +29,7 @@ class SplashScreenState extends State<SplashScreen> {
             style: TextStyle(
               fontSize: 40,
               fontWeight: FontWeight.w700,
-              color: bgColor,
+              color: Colors.white,
             ),
           ),
         ),

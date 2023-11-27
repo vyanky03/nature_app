@@ -5,10 +5,12 @@ class ProfileTabs extends StatelessWidget {
     super.key,
     required this.tabTitle,
     required this.preicon,
+    required this.press,
   });
 
   final String tabTitle;
   final Icon preicon;
+  final Function() press;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class ProfileTabs extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 5),
           child: GestureDetector(
-            onTap: () {},
+            onTap: press,
             child: Row(
               children: [
                 preicon,
