@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nature_app/constants.dart';
+import 'package:nature_app/splash_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class FinalButton extends StatelessWidget {
   const FinalButton({
@@ -12,7 +14,9 @@ class FinalButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () {
+        onPressed: () async {
+          var sharedPref = await SharedPreferences.getInstance();
+          sharedPref.setBool(SplashScreenState.keyLogin, true);
           Navigator.pushNamed(context, '/profile');
         },
         style: ButtonStyle(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nature_app/profilescreen/profile.dart';
 import 'package:nature_app/signupscreen/signup.dart';
+import 'package:nature_app/splash_screen.dart';
 import 'package:nature_app/welcomescreen/welcome.dart';
 
 void main() {
@@ -14,9 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => const WelcomeScreen(),
+        '/': (context) => const SplashScreen(),
         '/signup': (context) => const SignUpScreen(),
         '/profile': (context) => const ProfileScreen(),
+        '/welcome': (context) => const WelcomeScreen(),
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Ubuntu'),
