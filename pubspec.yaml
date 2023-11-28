@@ -39,6 +39,7 @@ dependencies:
   flutter_profile_picture: ^2.0.0
   shared_preferences: ^2.2.2
   firebase_auth: ^4.14.1
+  firebase_core: ^2.23.0
 
 dev_dependencies:
   flutter_test:
