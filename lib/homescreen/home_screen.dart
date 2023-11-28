@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nature_app/homescreen/widgets/appbar.dart';
 import 'package:nature_app/homescreen/widgets/card_list.dart';
+import 'package:nature_app/homescreen/widgets/nav_drawer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,6 +10,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // Size size = MediaQuery.of(context).size;
     return Scaffold(
+      drawer: const Navdrawer(),
       appBar: buildAppbar(),
       body: const CardList(),
     );

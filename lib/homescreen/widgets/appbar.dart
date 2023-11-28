@@ -5,7 +5,6 @@ AppBar buildAppbar() {
   return AppBar(
     title: const Text('The Nature App'),
     centerTitle: true,
-    leading: const Icon(Icons.menu),
     backgroundColor: bgColor,
     actions: const [
       Icon(Icons.shopping_cart),
