@@ -12,8 +12,8 @@ class CardContainer extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: size.height * 0.25,
-            width: size.width * 0.45,
+            height: size.height * 0.20,
+            width: size.width * 0.40,
             decoration: const BoxDecoration(
               color: Colors.amberAccent,
               borderRadius: BorderRadius.only(
@@ -24,7 +24,7 @@ class CardContainer extends StatelessWidget {
           ),
           Container(
             height: size.height * 0.08,
-            width: size.width * 0.45,
+            width: size.width * 0.40,
             decoration: const BoxDecoration(
               color: Color.fromARGB(137, 202, 201, 201),
               borderRadius: BorderRadius.only(

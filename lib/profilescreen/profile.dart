@@ -25,20 +25,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
       body: IndexedStack(
         index: currentIndex,
         children: screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedIconTheme: const IconThemeData(size: 35),
+        elevation: 0,
         backgroundColor: bgColor,
         currentIndex: currentIndex,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white54,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black54,
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        iconSize: 30,
+        iconSize: 25,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
