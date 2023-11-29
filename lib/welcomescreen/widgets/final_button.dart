@@ -1,25 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:nature_app/constants.dart';
-import 'package:nature_app/splash_screen.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class FinalButton extends StatelessWidget {
   const FinalButton({
     super.key,
     required this.text,
+    required this.press,
   });
   final String text;
+  final Function() press;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-        onPressed: () async {
-          var sharedPref = await SharedPreferences.getInstance();
-          sharedPref.setBool(SplashScreenState.keyLogin, true);
-          // ignore: use_build_context_synchronously
-          Navigator.pushNamed(context, '/profile');
-        },
+        onPressed: press,
         style: ButtonStyle(
           shape: MaterialStatePropertyAll(
             RoundedRectangleBorder(

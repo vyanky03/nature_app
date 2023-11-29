@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nature_app/signupscreen/widgets/divider.dart';
 import 'package:nature_app/welcomescreen/widgets/final_button.dart';
@@ -12,7 +13,7 @@ class SignUpScreen extends StatelessWidget {
   final TextEditingController emailcontroller = TextEditingController();
   final TextEditingController passwordcontroller = TextEditingController();
   final TextEditingController number = TextEditingController();
-  // TextEditingController passwordcontroller = TextEditingController();
+  final TextEditingController passwordcontroller2 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -73,26 +74,38 @@ class SignUpScreen extends StatelessWidget {
                   controller: number,
                   isPasswordtype: false,
                   text: "Enter Mobile Number",
-                  icon: Icon(Icons.numbers),
-                ),
-                const LoginText(text: 'Password'),
-                LoginField(
-                  controller: passwordcontroller,
-                  isPasswordtype: true,
-                  text: "Enter PasswordD",
-                  icon: Icon(Icons.password),
+                  icon: const Icon(Icons.numbers),
                 ),
                 const LoginText(text: 'Password'),
                 LoginField(
                   controller: passwordcontroller,
                   isPasswordtype: true,
                   text: "Enter Password",
-                  icon: Icon(Icons.password),
+                  icon: const Icon(Icons.password),
+                ),
+                const LoginText(text: 'Confirm Password'),
+                LoginField(
+                  controller: passwordcontroller2,
+                  isPasswordtype: true,
+                  text: "Confirm the Password",
+                  icon: const Icon(Icons.password),
                 ),
                 const SizedBox(
                   height: 15,
                 ),
-                const FinalButton(
+                FinalButton(
+                  press: () {
+                    FirebaseAuth.instance
+                        .createUserWithEmailAndPassword(
+                            email: emailcontroller.text,
+                            password: passwordcontroller.text)
+                        .then((value) {
+                      Navigator.pushNamed(context, '/profile');
+                    }).onError((error, stackTrace) {
+                      // ignore: avoid_print
+                      print('Error ${error.toString()}');
+                    });
+                  },
                   text: 'Signup',
                 ),
                 const SizedBox(

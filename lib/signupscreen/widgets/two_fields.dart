@@ -17,7 +17,8 @@ class TwoFields extends StatelessWidget {
   final Size size;
   final String text, fieldtext, text2, fieldtext2;
   final Icon icon, icon2;
-  final TextEditingController controller = TextEditingController();
+  final TextEditingController textEditingController = TextEditingController();
+  final TextEditingController textEditingController2 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class TwoFields extends StatelessWidget {
             SizedBox(
               width: size.width / 2 - 16,
               child: LoginField(
-                controller: controller,
+                controller: textEditingController2,
                 isPasswordtype: false,
                 text: fieldtext,
                 icon: icon,
@@ -48,7 +49,7 @@ class TwoFields extends StatelessWidget {
             SizedBox(
               width: size.width / 2 - 16,
               child: LoginField(
-                controller: controller,
+                controller: textEditingController,
                 isPasswordtype: false,
                 text: fieldtext2,
                 icon: icon2,

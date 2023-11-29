@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nature_app/profilescreen/widgets/profile_tabs.dart';
 
@@ -63,7 +64,11 @@ class _ProfileListState extends State<ProfileList> {
             ProfileTabs(
               preicon: const Icon(Icons.logout_rounded),
               tabTitle: 'Log Out',
-              press: () {},
+              press: () {
+                FirebaseAuth.instance.signOut().then((value) {
+                  Navigator.pushNamed(context, '/welcome');
+                });
+              },
             ),
           ],
         ),
