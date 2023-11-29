@@ -4,7 +4,10 @@ import 'package:nature_app/welcomescreen/widgets/login_field.dart';
 import 'package:nature_app/welcomescreen/widgets/login_text.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+  WelcomeScreen({super.key});
+
+  final TextEditingController emailcontroller = TextEditingController();
+  final TextEditingController passwordcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +48,11 @@ class WelcomeScreen extends StatelessWidget {
             const LoginText(
               text: 'Login ID',
             ),
-            const LoginField(
+            LoginField(
+              controller: emailcontroller,
+              isPasswordtype: false,
               text: 'Login ID',
-              icon: Icon(Icons.person),
+              icon: const Icon(Icons.person),
             ),
             const SizedBox(
               height: 15,
@@ -55,9 +60,11 @@ class WelcomeScreen extends StatelessWidget {
             const LoginText(
               text: 'Login ID',
             ),
-            const LoginField(
+            LoginField(
+              controller: passwordcontroller,
+              isPasswordtype: true,
               text: 'Password',
-              icon: Icon(Icons.password),
+              icon: const Icon(Icons.password),
             ),
             const SizedBox(
               height: 15,

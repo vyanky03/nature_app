@@ -5,14 +5,22 @@ class LoginField extends StatelessWidget {
     super.key,
     required this.text,
     required this.icon,
+    required this.isPasswordtype,
+    required this.controller,
   });
 
   final String text;
   final Icon icon;
+  final bool isPasswordtype;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
+      obscureText: isPasswordtype,
+      enableSuggestions: !isPasswordtype,
+      autocorrect: !isPasswordtype,
       decoration: InputDecoration(
         hintText: text,
         prefixIcon: icon,

@@ -7,7 +7,12 @@ import 'package:nature_app/welcomescreen/widgets/login_text.dart';
 import 'package:nature_app/signupscreen/widgets/two_fields.dart';
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+  SignUpScreen({super.key});
+
+  final TextEditingController emailcontroller = TextEditingController();
+  final TextEditingController passwordcontroller = TextEditingController();
+  final TextEditingController number = TextEditingController();
+  // TextEditingController passwordcontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +54,11 @@ class SignUpScreen extends StatelessWidget {
                   icon2: const Icon(Icons.person),
                 ),
                 const LoginText(text: 'Email ID'),
-                const LoginField(
+                LoginField(
+                  controller: emailcontroller,
+                  isPasswordtype: false,
                   text: "Enter Email ID",
-                  icon: Icon(Icons.mail),
+                  icon: const Icon(Icons.mail),
                 ),
                 TwoFields(
                     size: size,
@@ -62,17 +69,23 @@ class SignUpScreen extends StatelessWidget {
                     icon: const Icon(Icons.location_city),
                     icon2: const Icon(Icons.location_city)),
                 const LoginText(text: 'Mobile Number'),
-                const LoginField(
+                LoginField(
+                  controller: number,
+                  isPasswordtype: false,
                   text: "Enter Mobile Number",
                   icon: Icon(Icons.numbers),
                 ),
                 const LoginText(text: 'Password'),
-                const LoginField(
+                LoginField(
+                  controller: passwordcontroller,
+                  isPasswordtype: true,
                   text: "Enter PasswordD",
                   icon: Icon(Icons.password),
                 ),
                 const LoginText(text: 'Password'),
-                const LoginField(
+                LoginField(
+                  controller: passwordcontroller,
+                  isPasswordtype: true,
                   text: "Enter Password",
                   icon: Icon(Icons.password),
                 ),

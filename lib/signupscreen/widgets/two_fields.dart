@@ -3,7 +3,7 @@ import 'package:nature_app/welcomescreen/widgets/login_field.dart';
 import 'package:nature_app/welcomescreen/widgets/login_text.dart';
 
 class TwoFields extends StatelessWidget {
-  const TwoFields({
+  TwoFields({
     super.key,
     required this.size,
     required this.text,
@@ -17,6 +17,8 @@ class TwoFields extends StatelessWidget {
   final Size size;
   final String text, fieldtext, text2, fieldtext2;
   final Icon icon, icon2;
+  final TextEditingController controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -28,6 +30,8 @@ class TwoFields extends StatelessWidget {
             SizedBox(
               width: size.width / 2 - 16,
               child: LoginField(
+                controller: controller,
+                isPasswordtype: false,
                 text: fieldtext,
                 icon: icon,
               ),
@@ -44,6 +48,8 @@ class TwoFields extends StatelessWidget {
             SizedBox(
               width: size.width / 2 - 16,
               child: LoginField(
+                controller: controller,
+                isPasswordtype: false,
                 text: fieldtext2,
                 icon: icon2,
               ),
